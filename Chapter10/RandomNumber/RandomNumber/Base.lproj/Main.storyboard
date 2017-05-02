@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ju-YE-wmO"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJM-ao-SLN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywG-oV-qfp">
+                                <rect key="frame" x="17" y="169" width="343" height="30"/>
+                                <state key="normal" title="Seed Random Number Generator"/>
+                                <connections>
+                                    <action selector="seedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tac-tc-ZVl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4De-d3-NdO">
+                                <rect key="frame" x="16" y="250" width="343" height="30"/>
+                                <state key="normal" title="Generate Random Number"/>
+                                <connections>
+                                    <action selector="generateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="po3-cf-hJD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aBS-Q2-yC0">
+                                <rect key="frame" x="16" y="378.66666666666674" width="50" height="49.333333333333314"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ag-aT-IEv">
+                                <rect key="frame" x="53" y="323" width="268" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5ag-aT-IEv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="7zS-rE-5bq"/>
+                            <constraint firstItem="ywG-oV-qfp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-149.5" id="9QC-PB-jLS"/>
+                            <constraint firstItem="4De-d3-NdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GcF-xA-cTR"/>
+                            <constraint firstItem="4De-d3-NdO" firstAttribute="top" secondItem="7Ju-YE-wmO" secondAttribute="bottom" constant="230" id="HYt-2x-9RP"/>
+                            <constraint firstAttribute="trailing" secondItem="aBS-Q2-yC0" secondAttribute="trailing" constant="309" id="LAs-cV-enM"/>
+                            <constraint firstItem="ywG-oV-qfp" firstAttribute="centerX" secondItem="4De-d3-NdO" secondAttribute="centerX" constant="1" id="Pab-MI-JlJ"/>
+                            <constraint firstItem="XJM-ao-SLN" firstAttribute="top" secondItem="aBS-Q2-yC0" secondAttribute="bottom" constant="239" id="TYL-VX-HGD"/>
+                            <constraint firstItem="ywG-oV-qfp" firstAttribute="leading" secondItem="aBS-Q2-yC0" secondAttribute="leading" constant="1" id="Uxm-KE-kuJ"/>
+                            <constraint firstItem="aBS-Q2-yC0" firstAttribute="top" secondItem="5ag-aT-IEv" secondAttribute="top" constant="55.666666666666742" id="YMn-fF-r1u"/>
+                            <constraint firstItem="aBS-Q2-yC0" firstAttribute="top" secondItem="ywG-oV-qfp" secondAttribute="bottom" constant="179.66666666666674" id="bhQ-gY-qsQ"/>
+                            <constraint firstItem="4De-d3-NdO" firstAttribute="leading" secondItem="ywG-oV-qfp" secondAttribute="leading" constant="-1" id="d4M-6j-Q73"/>
+                            <constraint firstItem="4De-d3-NdO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lXf-yQ-BSq"/>
+                            <constraint firstItem="ywG-oV-qfp" firstAttribute="centerX" secondItem="5ag-aT-IEv" secondAttribute="centerX" constant="1.5" id="x7l-7g-HV7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="randomNumberLabel" destination="5ag-aT-IEv" id="trr-vF-bzS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
